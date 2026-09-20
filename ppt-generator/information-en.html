@@ -42,7 +42,7 @@ body {
 }
 
 body::before {
-  position: fixed;
+  position:absolute;
   inset: 0;
   z-index: -1;
   content: "";
@@ -284,7 +284,7 @@ h2 { margin-bottom: 17px; font-size: clamp(2.25rem, 5vw, 4.7rem); line-height: 1
 
 .case-grid { display: grid; grid-template-columns: minmax(290px, .72fr) minmax(0, 1.55fr); gap: 18px; align-items: start; }
 .case-console { position: sticky; top: 90px; border: 1px solid var(--line); border-radius: var(--radius); background: #0a0e15; overflow: hidden; }
-.case-console pre { max-height: 310px; padding: 20px; overflow: auto; color: #aab7c9; border-bottom: 1px solid rgba(255,255,255,.07); }
+.case-console pre { max-height:none; padding: 20px; overflow:visible; color: #aab7c9; border-bottom: 1px solid rgba(255,255,255,.07); }
 .proof { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,.07); }
 .proof-label { display: block; margin-bottom: 9px; color: #647187; font: 650 .64rem ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
 .command { color: #dbe5f2; font: .72rem/1.55 ui-monospace, monospace; word-break: break-all; }
@@ -353,7 +353,7 @@ h2 { margin-bottom: 17px; font-size: clamp(2.25rem, 5vw, 4.7rem); line-height: 1
 footer { padding: 30px 0 54px; border-top: 1px solid rgba(255,255,255,.06); color: #657187; font-size: .76rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
 
-[data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+[data-reveal] { opacity: 1; transform: none; transition: none; }
 [data-reveal].visible { opacity: 1; transform: none; }
 
 @keyframes railPulse {
@@ -404,42 +404,11 @@ footer { padding: 30px 0 54px; border-top: 1px solid rgba(255,255,255,.06); colo
   [data-reveal] { opacity: 1; transform: none; }
 }
 
-  </style>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = document.querySelectorAll("[data-reveal]");
-  const observer = new IntersectionObserver(
-    entries => entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    }),
-    { threshold: 0.12 }
-  );
-  revealItems.forEach(item => observer.observe(item));
+  .finch-page{width:100%;min-height:1px;background:#06080d;color:#f5f8ff;overflow:visible}.deck-viewer,.hero-montage,.cta-deck{display:none}
+</style>
 
-  document.querySelectorAll("[data-deck-viewer]").forEach(viewer => {
-    const stage = viewer.querySelector("[data-stage-image]");
-    const thumbs = [...viewer.querySelectorAll("[data-slide-src]")];
-    thumbs.forEach(button => button.addEventListener("click", () => {
-      const nextSource = button.dataset.slideSrc;
-      if (!nextSource || stage.getAttribute("src") === nextSource) return;
-      thumbs.forEach(item => item.classList.remove("active"));
-      button.classList.add("active");
-      stage.classList.add("switching");
-      window.setTimeout(() => {
-        stage.setAttribute("src", nextSource);
-        stage.setAttribute("alt", button.dataset.slideAlt || "Generated slide preview");
-        stage.classList.remove("switching");
-      }, 150);
-    }));
-  });
-});
-
-  </script>
 </head>
-<body>
+<body><div class="finch-page">
   <nav class="site-nav" aria-label="Page navigation">
     <div class="shell nav-inner">
       <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>PPT Generator</a>
@@ -447,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="#workflow">Workflow</a>
         <a href="#cases">Real cases</a>
         <a href="#features">Features</a>
-        <a class="locale-link" href="ppt-generator_info_zn.html" lang="zh-CN">中文</a>
+        <a class="locale-link" href="information-zh.html" lang="zh-CN">中文</a>
       </div>
     </div>
   </nav>
@@ -488,12 +457,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="render-panel">
             <div class="panel-bar"><span>REAL OUTPUT / 6 SLIDES</span><span>OK</span></div>
             <div class="hero-slide-wrap">
-              <img src="assets/decks/en-business-strategy/slide-1.png" alt="Generated Northstar SaaS APAC Growth Strategy cover slide">
+
             </div>
             <div class="hero-filmstrip" role="group" aria-label="Real generated slide thumbnails">
-              <img src="assets/decks/en-business-strategy/slide-3.png" alt="Generated market priority slide">
-              <img src="assets/decks/en-business-strategy/slide-4.png" alt="Generated two-column strategy slide">
-              <img src="assets/decks/en-business-strategy/slide-5.png" alt="Generated 90-day plan table slide">
+
+
+
             </div>
           </div>
         </div>
@@ -535,9 +504,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="after-node done">PPTX<br>validation OK</div>
             </div>
             <div class="after-slides">
-              <img src="assets/decks/en-business-strategy/slide-1.png" alt="Actual generated cover" loading="lazy">
-              <img src="assets/decks/en-business-strategy/slide-4.png" alt="Actual generated two-column slide" loading="lazy">
-              <img src="assets/decks/en-business-strategy/slide-5.png" alt="Actual generated table slide" loading="lazy">
+
+
+
             </div>
           </article>
         </div>
@@ -590,17 +559,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }</pre>
               <div class="proof"><span class="proof-label">Actual command</span><div class="command">python3 ppt_generator.py information/assets/inputs/en-business-strategy.json</div></div>
               <div class="proof"><span class="proof-label">Actual result</span><div class="metrics"><div class="metric"><strong>ok:true</strong><small>status</small></div><div class="metric"><strong>6</strong><small>slides</small></div><div class="metric"><strong>0</strong><small>issues</small></div></div></div>
-              <div class="downloads"><a class="download-link" href="assets/inputs/en-business-strategy.json">Full input</a><a class="download-link" href="assets/logs/en-business-strategy.json">Run log</a><a class="download-link" href="assets/outputs/en-business-strategy.pptx">PPTX</a><a class="download-link" href="assets/decks/en-business-strategy/en-business-strategy.pdf">PDF</a></div>
+              <div class="downloads"></div>
             </aside>
             <div class="deck-viewer" data-deck-viewer data-reveal>
               <div class="viewer-bar"><span>en-business-strategy.pptx</span><span>16:9 · EDITABLE</span></div>
-              <div class="viewer-stage"><img data-stage-image src="assets/decks/en-business-strategy/slide-1.png" alt="Northstar SaaS APAC Growth Strategy cover"></div>
+              <div class="viewer-stage"></div>
               <div class="thumb-strip">
-                <button type="button" class="thumb active" data-slide-src="assets/decks/en-business-strategy/slide-1.png" data-slide-alt="Northstar SaaS APAC Growth Strategy cover"><img src="assets/decks/en-business-strategy/slide-1.png" alt="Slide 1"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-business-strategy/slide-3.png" data-slide-alt="Priority markets"><img src="assets/decks/en-business-strategy/slide-3.png" alt="Slide 3"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-business-strategy/slide-4.png" data-slide-alt="Market entry and readiness"><img src="assets/decks/en-business-strategy/slide-4.png" alt="Slide 4"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-business-strategy/slide-5.png" data-slide-alt="90-day operating cadence"><img src="assets/decks/en-business-strategy/slide-5.png" alt="Slide 5"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-business-strategy/slide-6.png" data-slide-alt="Decision thresholds"><img src="assets/decks/en-business-strategy/slide-6.png" alt="Slide 6"></button>
+                <button type="button" class="thumb active"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
               </div>
             </div>
           </div>
@@ -628,17 +597,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }</pre>
               <div class="proof"><span class="proof-label">Actual command</span><div class="command">python3 ppt_generator.py information/assets/inputs/en-research-data.json</div></div>
               <div class="proof"><span class="proof-label">Actual result</span><div class="metrics"><div class="metric"><strong>ok:true</strong><small>status</small></div><div class="metric"><strong>6</strong><small>slides</small></div><div class="metric"><strong>0</strong><small>issues</small></div></div></div>
-              <div class="downloads"><a class="download-link" href="assets/inputs/en-research-data.json">Full input</a><a class="download-link" href="assets/logs/en-research-data.json">Run log</a><a class="download-link" href="assets/outputs/en-research-data.pptx">PPTX</a><a class="download-link" href="assets/decks/en-research-data/en-research-data.pdf">PDF</a></div>
+              <div class="downloads"></div>
             </aside>
             <div class="deck-viewer" data-deck-viewer data-reveal>
               <div class="viewer-bar"><span>en-research-data.pptx</span><span>16:9 · EDITABLE</span></div>
-              <div class="viewer-stage"><img data-stage-image src="assets/decks/en-research-data/slide-1.png" alt="Student Commute Modes cover"></div>
+              <div class="viewer-stage"></div>
               <div class="thumb-strip">
-                <button type="button" class="thumb active" data-slide-src="assets/decks/en-research-data/slide-1.png" data-slide-alt="Student Commute Modes cover"><img src="assets/decks/en-research-data/slide-1.png" alt="Slide 1"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-research-data/slide-3.png" data-slide-alt="Sample and research question"><img src="assets/decks/en-research-data/slide-3.png" alt="Slide 3"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-research-data/slide-4.png" data-slide-alt="Commute mode distribution table"><img src="assets/decks/en-research-data/slide-4.png" alt="Slide 4"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-research-data/slide-5.png" data-slide-alt="Observations and limitations"><img src="assets/decks/en-research-data/slide-5.png" alt="Slide 5"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-research-data/slide-6.png" data-slide-alt="Next analysis"><img src="assets/decks/en-research-data/slide-6.png" alt="Slide 6"></button>
+                <button type="button" class="thumb active"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
               </div>
             </div>
           </div>
@@ -667,17 +636,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }</pre>
               <div class="proof"><span class="proof-label">Actual command</span><div class="command">python3 ppt_generator.py information/assets/inputs/en-product-launch.json</div></div>
               <div class="proof"><span class="proof-label">Actual result</span><div class="metrics"><div class="metric"><strong>ok:true</strong><small>status</small></div><div class="metric"><strong>6</strong><small>slides</small></div><div class="metric"><strong>0</strong><small>issues</small></div></div></div>
-              <div class="downloads"><a class="download-link" href="assets/inputs/en-product-launch.json">Full input</a><a class="download-link" href="assets/logs/en-product-launch.json">Run log</a><a class="download-link" href="assets/outputs/en-product-launch.pptx">PPTX</a><a class="download-link" href="assets/decks/en-product-launch/en-product-launch.pdf">PDF</a></div>
+              <div class="downloads"></div>
             </aside>
             <div class="deck-viewer" data-deck-viewer data-reveal>
               <div class="viewer-bar"><span>en-product-launch.pptx</span><span>16:9 · EDITABLE</span></div>
-              <div class="viewer-stage"><img data-stage-image src="assets/decks/en-product-launch/slide-1.png" alt="FocusDock launch pitch cover"></div>
+              <div class="viewer-stage"></div>
               <div class="thumb-strip">
-                <button type="button" class="thumb active" data-slide-src="assets/decks/en-product-launch/slide-1.png" data-slide-alt="FocusDock cover"><img src="assets/decks/en-product-launch/slide-1.png" alt="Slide 1"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-product-launch/slide-3.png" data-slide-alt="The user problem"><img src="assets/decks/en-product-launch/slide-3.png" alt="Slide 3"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-product-launch/slide-4.png" data-slide-alt="Experience and launch story"><img src="assets/decks/en-product-launch/slide-4.png" alt="Slide 4"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-product-launch/slide-5.png" data-slide-alt="Four-week launch cadence"><img src="assets/decks/en-product-launch/slide-5.png" alt="Slide 5"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/en-product-launch/slide-6.png" data-slide-alt="Launch success criteria"><img src="assets/decks/en-product-launch/slide-6.png" alt="Slide 6"></button>
+                <button type="button" class="thumb active"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
               </div>
             </div>
           </div>
@@ -708,11 +677,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </section>
 
     <section class="shell cta" aria-labelledby="cta-title" data-reveal>
-      <div class="cta-copy"><div class="kicker">Ship The Actual File</div><h2 id="cta-title">Define the structure. Get the PPTX.</h2><p>Move from reproducible JSON to a presentation that the program has reopened and checked. Download the real case and inspect it directly.</p><div class="cta-actions"><a class="button primary" href="assets/outputs/en-product-launch.pptx">Download English case PPTX</a><a class="button" href="https://github.com/finchipaiorg/ppt-generator">View GitHub</a></div></div>
-      <div class="cta-deck"><img src="assets/decks/en-product-launch/slide-1.png" alt="Actual FocusDock cover slide" loading="lazy"><img src="assets/decks/en-product-launch/slide-5.png" alt="Actual FocusDock launch cadence slide" loading="lazy"></div>
+      <div class="cta-copy"><div class="kicker">Ship The Actual File</div><h2 id="cta-title">Define the structure. Get the PPTX.</h2><p>Move from reproducible JSON to a presentation that the program has reopened and checked. Download the real case and inspect it directly.</p><div class="cta-actions"><a class="button" href="https://github.com/finchipaiorg/ppt-generator">View GitHub</a></div></div>
+      <div class="cta-deck"></div>
     </section>
   </main>
 
   <footer><div class="shell footer-inner"><span>PPT Generator · FinChip Information</span><span>All 36 previews were exported from six real PPTX files</span></div></footer>
-</body>
+</div></body>
 </html>

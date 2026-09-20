@@ -42,7 +42,7 @@ body {
 }
 
 body::before {
-  position: fixed;
+  position:absolute;
   inset: 0;
   z-index: -1;
   content: "";
@@ -284,7 +284,7 @@ h2 { margin-bottom: 17px; font-size: clamp(2.25rem, 5vw, 4.7rem); line-height: 1
 
 .case-grid { display: grid; grid-template-columns: minmax(290px, .72fr) minmax(0, 1.55fr); gap: 18px; align-items: start; }
 .case-console { position: sticky; top: 90px; border: 1px solid var(--line); border-radius: var(--radius); background: #0a0e15; overflow: hidden; }
-.case-console pre { max-height: 310px; padding: 20px; overflow: auto; color: #aab7c9; border-bottom: 1px solid rgba(255,255,255,.07); }
+.case-console pre { max-height:none; padding: 20px; overflow:visible; color: #aab7c9; border-bottom: 1px solid rgba(255,255,255,.07); }
 .proof { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,.07); }
 .proof-label { display: block; margin-bottom: 9px; color: #647187; font: 650 .64rem ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
 .command { color: #dbe5f2; font: .72rem/1.55 ui-monospace, monospace; word-break: break-all; }
@@ -353,7 +353,7 @@ h2 { margin-bottom: 17px; font-size: clamp(2.25rem, 5vw, 4.7rem); line-height: 1
 footer { padding: 30px 0 54px; border-top: 1px solid rgba(255,255,255,.06); color: #657187; font-size: .76rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
 
-[data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+[data-reveal] { opacity: 1; transform: none; transition: none; }
 [data-reveal].visible { opacity: 1; transform: none; }
 
 @keyframes railPulse {
@@ -404,42 +404,11 @@ footer { padding: 30px 0 54px; border-top: 1px solid rgba(255,255,255,.06); colo
   [data-reveal] { opacity: 1; transform: none; }
 }
 
-  </style>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = document.querySelectorAll("[data-reveal]");
-  const observer = new IntersectionObserver(
-    entries => entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    }),
-    { threshold: 0.12 }
-  );
-  revealItems.forEach(item => observer.observe(item));
+  .finch-page{width:100%;min-height:1px;background:#06080d;color:#f5f8ff;overflow:visible}.deck-viewer,.hero-montage,.cta-deck{display:none}
+</style>
 
-  document.querySelectorAll("[data-deck-viewer]").forEach(viewer => {
-    const stage = viewer.querySelector("[data-stage-image]");
-    const thumbs = [...viewer.querySelectorAll("[data-slide-src]")];
-    thumbs.forEach(button => button.addEventListener("click", () => {
-      const nextSource = button.dataset.slideSrc;
-      if (!nextSource || stage.getAttribute("src") === nextSource) return;
-      thumbs.forEach(item => item.classList.remove("active"));
-      button.classList.add("active");
-      stage.classList.add("switching");
-      window.setTimeout(() => {
-        stage.setAttribute("src", nextSource);
-        stage.setAttribute("alt", button.dataset.slideAlt || "Generated slide preview");
-        stage.classList.remove("switching");
-      }, 150);
-    }));
-  });
-});
-
-  </script>
 </head>
-<body>
+<body><div class="finch-page">
   <nav class="site-nav" aria-label="页面导航">
     <div class="shell nav-inner">
       <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>PPT Generator</a>
@@ -447,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="#workflow">流程</a>
         <a href="#cases">真实案例</a>
         <a href="#features">能力</a>
-        <a class="locale-link" href="ppt-generator_info_en.html" lang="en">EN</a>
+        <a class="locale-link" href="information-en.html" lang="en">EN</a>
       </div>
     </div>
   </nav>
@@ -488,12 +457,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="render-panel">
             <div class="panel-bar"><span>REAL OUTPUT / 6 SLIDES</span><span>OK</span></div>
             <div class="hero-slide-wrap">
-              <img src="assets/decks/zh-business-strategy/slide-1.png" alt="真实生成的北极星 SaaS 亚太增长策略标题页">
+
             </div>
             <div class="hero-filmstrip" role="group" aria-label="真实生成的幻灯片缩略图">
-              <img src="assets/decks/zh-business-strategy/slide-3.png" alt="市场优先级幻灯片">
-              <img src="assets/decks/zh-business-strategy/slide-4.png" alt="双栏策略幻灯片">
-              <img src="assets/decks/zh-business-strategy/slide-5.png" alt="90 天计划表格幻灯片">
+
+
+
             </div>
           </div>
         </div>
@@ -535,9 +504,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="after-node done">PPTX<br>validation OK</div>
             </div>
             <div class="after-slides">
-              <img src="assets/decks/zh-business-strategy/slide-1.png" alt="真实生成标题页" loading="lazy">
-              <img src="assets/decks/zh-business-strategy/slide-4.png" alt="真实生成双栏页" loading="lazy">
-              <img src="assets/decks/zh-business-strategy/slide-5.png" alt="真实生成表格页" loading="lazy">
+
+
+
             </div>
           </article>
         </div>
@@ -590,17 +559,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }</pre>
               <div class="proof"><span class="proof-label">Actual command</span><div class="command">python3 ppt_generator.py information/assets/inputs/zh-business-strategy.json</div></div>
               <div class="proof"><span class="proof-label">Actual result</span><div class="metrics"><div class="metric"><strong>ok:true</strong><small>status</small></div><div class="metric"><strong>6</strong><small>slides</small></div><div class="metric"><strong>0</strong><small>issues</small></div></div></div>
-              <div class="downloads"><a class="download-link" href="assets/inputs/zh-business-strategy.json">完整输入</a><a class="download-link" href="assets/logs/zh-business-strategy.json">运行日志</a><a class="download-link" href="assets/outputs/zh-business-strategy.pptx">PPTX</a><a class="download-link" href="assets/decks/zh-business-strategy/zh-business-strategy.pdf">PDF</a></div>
+              <div class="downloads"></div>
             </aside>
             <div class="deck-viewer" data-deck-viewer data-reveal>
               <div class="viewer-bar"><span>zh-business-strategy.pptx</span><span>16:9 · EDITABLE</span></div>
-              <div class="viewer-stage"><img data-stage-image src="assets/decks/zh-business-strategy/slide-1.png" alt="北极星 SaaS 亚太增长策略标题页"></div>
+              <div class="viewer-stage"></div>
               <div class="thumb-strip">
-                <button type="button" class="thumb active" data-slide-src="assets/decks/zh-business-strategy/slide-1.png" data-slide-alt="北极星 SaaS 亚太增长策略标题页"><img src="assets/decks/zh-business-strategy/slide-1.png" alt="第 1 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-business-strategy/slide-3.png" data-slide-alt="三个优先市场"><img src="assets/decks/zh-business-strategy/slide-3.png" alt="第 3 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-business-strategy/slide-4.png" data-slide-alt="市场进入与产品准备"><img src="assets/decks/zh-business-strategy/slide-4.png" alt="第 4 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-business-strategy/slide-5.png" data-slide-alt="90 天执行节奏表格"><img src="assets/decks/zh-business-strategy/slide-5.png" alt="第 5 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-business-strategy/slide-6.png" data-slide-alt="决策门槛"><img src="assets/decks/zh-business-strategy/slide-6.png" alt="第 6 页"></button>
+                <button type="button" class="thumb active"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
               </div>
             </div>
           </div>
@@ -628,17 +597,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }</pre>
               <div class="proof"><span class="proof-label">Actual command</span><div class="command">python3 ppt_generator.py information/assets/inputs/zh-research-data.json</div></div>
               <div class="proof"><span class="proof-label">Actual result</span><div class="metrics"><div class="metric"><strong>ok:true</strong><small>status</small></div><div class="metric"><strong>6</strong><small>slides</small></div><div class="metric"><strong>0</strong><small>issues</small></div></div></div>
-              <div class="downloads"><a class="download-link" href="assets/inputs/zh-research-data.json">完整输入</a><a class="download-link" href="assets/logs/zh-research-data.json">运行日志</a><a class="download-link" href="assets/outputs/zh-research-data.pptx">PPTX</a><a class="download-link" href="assets/decks/zh-research-data/zh-research-data.pdf">PDF</a></div>
+              <div class="downloads"></div>
             </aside>
             <div class="deck-viewer" data-deck-viewer data-reveal>
               <div class="viewer-bar"><span>zh-research-data.pptx</span><span>16:9 · EDITABLE</span></div>
-              <div class="viewer-stage"><img data-stage-image src="assets/decks/zh-research-data/slide-1.png" alt="大学生通勤方式研究标题页"></div>
+              <div class="viewer-stage"></div>
               <div class="thumb-strip">
-                <button type="button" class="thumb active" data-slide-src="assets/decks/zh-research-data/slide-1.png" data-slide-alt="大学生通勤方式研究标题页"><img src="assets/decks/zh-research-data/slide-1.png" alt="第 1 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-research-data/slide-3.png" data-slide-alt="样本与研究问题"><img src="assets/decks/zh-research-data/slide-3.png" alt="第 3 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-research-data/slide-4.png" data-slide-alt="通勤方式分布表格"><img src="assets/decks/zh-research-data/slide-4.png" alt="第 4 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-research-data/slide-5.png" data-slide-alt="观察与限制"><img src="assets/decks/zh-research-data/slide-5.png" alt="第 5 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-research-data/slide-6.png" data-slide-alt="下一步分析"><img src="assets/decks/zh-research-data/slide-6.png" alt="第 6 页"></button>
+                <button type="button" class="thumb active"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
               </div>
             </div>
           </div>
@@ -666,17 +635,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }</pre>
               <div class="proof"><span class="proof-label">Actual command</span><div class="command">python3 ppt_generator.py information/assets/inputs/zh-product-launch.json</div></div>
               <div class="proof"><span class="proof-label">Actual result</span><div class="metrics"><div class="metric"><strong>ok:true</strong><small>status</small></div><div class="metric"><strong>6</strong><small>slides</small></div><div class="metric"><strong>0</strong><small>issues</small></div></div></div>
-              <div class="downloads"><a class="download-link" href="assets/inputs/zh-product-launch.json">完整输入</a><a class="download-link" href="assets/logs/zh-product-launch.json">运行日志</a><a class="download-link" href="assets/outputs/zh-product-launch.pptx">PPTX</a><a class="download-link" href="assets/decks/zh-product-launch/zh-product-launch.pdf">PDF</a></div>
+              <div class="downloads"></div>
             </aside>
             <div class="deck-viewer" data-deck-viewer data-reveal>
               <div class="viewer-bar"><span>zh-product-launch.pptx</span><span>16:9 · EDITABLE</span></div>
-              <div class="viewer-stage"><img data-stage-image src="assets/decks/zh-product-launch/slide-1.png" alt="FocusDock 产品发布提案标题页"></div>
+              <div class="viewer-stage"></div>
               <div class="thumb-strip">
-                <button type="button" class="thumb active" data-slide-src="assets/decks/zh-product-launch/slide-1.png" data-slide-alt="FocusDock 标题页"><img src="assets/decks/zh-product-launch/slide-1.png" alt="第 1 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-product-launch/slide-3.png" data-slide-alt="用户面对的具体问题"><img src="assets/decks/zh-product-launch/slide-3.png" alt="第 3 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-product-launch/slide-4.png" data-slide-alt="体验与传播重点"><img src="assets/decks/zh-product-launch/slide-4.png" alt="第 4 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-product-launch/slide-5.png" data-slide-alt="四周发布节奏"><img src="assets/decks/zh-product-launch/slide-5.png" alt="第 5 页"></button>
-                <button type="button" class="thumb" data-slide-src="assets/decks/zh-product-launch/slide-6.png" data-slide-alt="发布成功判断方式"><img src="assets/decks/zh-product-launch/slide-6.png" alt="第 6 页"></button>
+                <button type="button" class="thumb active"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
+                <button type="button" class="thumb"></button>
               </div>
             </div>
           </div>
@@ -707,11 +676,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </section>
 
     <section class="shell cta" aria-labelledby="cta-title" data-reveal>
-      <div class="cta-copy"><div class="kicker">Ship The Actual File</div><h2 id="cta-title">输入结构，拿到真正的 PPTX</h2><p>从可复现的 JSON 输入，到经过回读校验的演示文稿。下载真实案例，直接检查内容与可编辑性。</p><div class="cta-actions"><a class="button primary" href="assets/outputs/zh-product-launch.pptx">下载中文案例 PPTX</a><a class="button" href="https://github.com/finchipaiorg/ppt-generator">查看 GitHub</a></div></div>
-      <div class="cta-deck"><img src="assets/decks/zh-product-launch/slide-1.png" alt="真实生成的 FocusDock 标题页" loading="lazy"><img src="assets/decks/zh-product-launch/slide-5.png" alt="真实生成的发布节奏表格页" loading="lazy"></div>
+      <div class="cta-copy"><div class="kicker">Ship The Actual File</div><h2 id="cta-title">输入结构，拿到真正的 PPTX</h2><p>从可复现的 JSON 输入，到经过回读校验的演示文稿。下载真实案例，直接检查内容与可编辑性。</p><div class="cta-actions"><a class="button" href="https://github.com/finchipaiorg/ppt-generator">查看 GitHub</a></div></div>
+      <div class="cta-deck"></div>
     </section>
   </main>
 
   <footer><div class="shell footer-inner"><span>PPT Generator · FinChip Information</span><span>页面中的 36 张预览均由 6 份真实 PPTX 导出</span></div></footer>
-</body>
+</div></body>
 </html>
