@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>美国桌面收纳｜选品与采购调研草稿</title>
+  <style>
+
+    :root {
+      --bg: #f6f7f9;
+      --ink: #18202a;
+      --muted: #627084;
+      --line: #dce2ea;
+      --panel: #ffffff;
+      --accent: #0b6bcb;
+      --accent-soft: #e7f1fd;
+      --risk: #9f3a20;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .shell { max-width: 1180px; margin: 0 auto; padding: 28px 20px 56px; }
+    .hero {
+      display: grid;
+      gap: 16px;
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero h1 { margin: 0; font-size: 34px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { margin: 0; max-width: 820px; color: var(--muted); }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
+    button {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      padding: 9px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .badges, .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      color: #164f8f;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 650;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+    .pill.long-pill {
+      display: inline-block;
+      flex-basis: 100%;
+      white-space: normal;
+      line-height: 1.45;
+      border-radius: 8px;
+      padding: 7px 10px;
+    }
+    .meta .pill.long-pill {
+      flex-basis: auto;
+      max-width: 100%;
+    }
+    .band { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin-bottom: 16px; }
+    .section-head h2 { margin: 0; font-size: 22px; letter-spacing: 0; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 680px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .grid > *,
+    .product-card,
+    .card-body,
+    .details,
+    .detail-row,
+    .detail-row strong {
+      min-width: 0;
+    }
+    .product-card, .original {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .product-card { display: grid; grid-template-rows: auto 1fr; }
+    .original { display: grid; grid-template-columns: 260px 1fr; gap: 18px; padding: 14px; }
+    .image-wrap { background: #eef2f6; height: 210px; width: 100%; display: grid; place-items: center; overflow: hidden; }
+    .product-image { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; background: #fff; }
+    .image-note {
+      align-self: end;
+      justify-self: stretch;
+      padding: 5px 8px;
+      background: rgba(24, 32, 42, .72);
+      color: #fff;
+      font-size: 11px;
+      text-align: center;
+    }
+    .image-placeholder {
+      width: 100%;
+      height: 210px;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      border: 1px dashed #b8c4d2;
+      background: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #eef2f6 10px, #eef2f6 20px);
+    }
+    .card-body { padding: 14px; display: grid; gap: 10px; align-content: start; }
+    .card-body h3, .original h3 { margin: 0; font-size: 17px; line-height: 1.3; letter-spacing: 0; }
+    .details { display: grid; gap: 6px; }
+    .detail-row { display: grid; grid-template-columns: 112px 1fr; gap: 10px; font-size: 13px; }
+    .detail-row span { color: var(--muted); }
+    .detail-row strong {
+      font-weight: 600;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      max-width: 100%;
+    }
+    .card-link { margin-top: 4px; }
+    .card-link,
+    .link-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .link-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      border-radius: 7px;
+      padding: 5px 10px;
+      border: 1px solid #bfd8ff;
+      background: #e8f1ff;
+      color: #1457a8;
+      font-size: 12px;
+      font-weight: 760;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    .link-chip:hover { text-decoration: none; filter: brightness(.98); }
+    .link-chip.source {
+      border-color: #a9ddd4;
+      background: #e3f7f4;
+      color: #006b68;
+    }
+    .link-chip.alternative {
+      border-color: #b7e7c9;
+      background: #e8f8ef;
+      color: #08713f;
+    }
+    .link-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      border-radius: 6px;
+      padding: 3px 8px;
+      background: #eef3f8;
+      color: #506176;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+    .table-wrap { overflow: hidden; max-width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; overflow-wrap: anywhere; word-break: break-word; }
+    td a, td code { overflow-wrap: anywhere; word-break: break-word; }
+    th { background: #f0f4f8; font-size: 12px; text-transform: uppercase; letter-spacing: .02em; color: var(--muted); }
+    .muted { color: var(--muted); }
+    .notes { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; }
+    .focus-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 2px;
+    }
+    .focus-legend span,
+    .mark-platform,
+    .mark-money,
+    .mark-margin,
+    .mark-source,
+    .mark-search,
+    .mark-risk,
+    .mark-caution {
+      display: inline;
+      border-radius: 5px;
+      padding: 1px 4px;
+      font-weight: 760;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .focus-legend span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      font-size: 12px;
+      border: 1px solid transparent;
+      padding: 3px 8px;
+    }
+    .legend-platform,
+    .mark-platform {
+      color: #1457a8;
+      background: #e8f1ff;
+      border-color: #bfd8ff;
+    }
+    .legend-money,
+    .mark-money,
+    .mark-margin {
+      color: #08713f;
+      background: #e8f8ef;
+      border-color: #b7e7c9;
+    }
+    .legend-source,
+    .mark-source,
+    .mark-search {
+      color: #006b68;
+      background: #e3f7f4;
+      border-color: #b5e5de;
+    }
+    .legend-risk,
+    .mark-risk,
+    .mark-caution {
+      color: #a33b17;
+      background: #fff0e7;
+      border-color: #ffd0b7;
+    }
+    .mark-caution {
+      color: #8a1f11;
+      background: #ffe9e7;
+    }
+    .row-margin,
+    .row-price,
+    .row-reason,
+    .row-risk {
+      border-radius: 6px;
+      padding: 4px 6px;
+      margin: -4px 0;
+    }
+    .row-margin { background: linear-gradient(90deg, rgba(15, 154, 89, .11), transparent 78%); }
+    .row-price { background: linear-gradient(90deg, rgba(11, 107, 203, .09), transparent 78%); }
+    .row-reason { background: linear-gradient(90deg, rgba(0, 107, 104, .09), transparent 78%); }
+    .row-risk { background: linear-gradient(90deg, rgba(163, 59, 23, .12), transparent 82%); }
+    .row-margin > span,
+    .row-price > span,
+    .row-reason > span,
+    .row-risk > span {
+      font-weight: 750;
+    }
+    .row-margin > span { color: #08713f; }
+    .row-price > span { color: #1457a8; }
+    .row-reason > span { color: #006b68; }
+    .row-risk > span { color: #a33b17; }
+    .notes li {
+      margin: 8px 0;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .original { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 28px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .shell { max-width: none; padding: 0; }
+      .toolbar { display: none; }
+      .band { break-inside: avoid; }
+      a { color: #000; text-decoration: underline; }
+      .mark-platform,
+      .mark-money,
+      .mark-margin,
+      .mark-source,
+      .mark-search,
+      .mark-risk,
+      .mark-caution {
+        color: #000;
+        border: 1px solid #ddd;
+        background: #f7f7f7;
+      }
+    }
+  
+.shell{width:100%;background:#f6f7f9;color:#18202a}.grid{grid-template-columns:1fr}.product-card{display:grid;grid-template-columns:minmax(230px,30%) 1fr}.image-wrap svg{width:100%;height:auto;display:block}.image-wrap{height:auto;min-height:220px}.detail-row strong{font-weight:500;overflow-wrap:anywhere}.candidate{padding:18px 0;border-top:1px solid #dce2ea}.candidate p{margin:8px 0}.status{color:#9f3a20}.card-link:empty{display:none}@media(max-width:650px){.product-card{display:block}.shell{padding:16px}.detail-row{display:block}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      
+      <h1>美国桌面收纳｜选品与采购调研草稿</h1>
+      <div class="meta"><span class="pill">查询日期 2026-09-20</span><span class="pill">Walmart US</span><span class="pill">公开信息快照 · 非近 30 天趋势结论</span><span class="pill">Walmart, Alibaba</span></div>
+      <p>这是公开信息筛选草稿，8 个候选中暂选 3 个。未证实最近 30 天热度，不宣称销量、畅销排名或采购收益。</p>
+      
+    </header>
+    
+    
+    
+    
+            <section class="band">
+              <div class="section-head"><h2>3 个优先调研候选</h2><p>选择依据为规格清晰度、可见反馈和采购比较价值；顺序不是销售排名。</p></div>
+              <div class="grid">
+    <article class="product-card">
+      <div class="image-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="AI 生成示意图 · 非实物"><rect width="600" height="360" fill="#eef3f5"/><ellipse cx="300" cy="260" rx="150" ry="35" fill="#809cae"/><path d="M160 100L300 65L435 110V235L300 275L160 230Z" fill="#d6e7ec" stroke="#50768b" stroke-width="4"/><path d="M300 65V275M160 100L435 235M435 110L160 230" stroke="#50768b" stroke-width="3"/><path d="M195 130V50M225 138V36M372 150V60" stroke="#b99361" stroke-width="12"/><text x="300" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#465b69">AI 生成示意图 · 非实物</text></svg></div>
+      <div class="card-body">
+        <div class="badges"><span class="pill">3 个优先调研候选</span><span class="pill">Walmart US</span><span class="pill">采购候选 · 非同款确认</span></div>
+        <h3>Pen+Gear 透明旋转收纳架</h3>
+        <div class="details"><div class="detail-row"><span>零售价格</span><strong>USD 18.82 / 单件（索引价）</strong></div>
+<div class="detail-row"><span>成本加价率</span><strong>待询价；不计算</strong></div>
+<div class="detail-row"><span>示意图说明</span><strong>AI 生成 SVG 示意图 · 非商品证据</strong></div>
+<div class="detail-row"><span>证据与入选理由</span><strong>入选：规格明确，旋转功能适合进一步做单商品比较 4.8/5，82 个评分；累计反馈，非近期销量 6.57 × 6.57 × 7.28 in; 亚克力、钢；4 格；单件</strong></div>
+<div class="detail-row"><span>采购路径与待核实项</span><strong>货源方向：透明亚克力、4 格、旋转底座。Alibaba 搜索入口尚不代表具体供应商。平替方向：塑料旋转笔筒，保留旋转取物功能；材质、格数、底座稳定性和尺寸须另核实。匹配等级：搜索线索，未评级。 货源检索词：clear acrylic rotating desk organizer 4 compartments China. 平替检索词：plastic rotating pen holder 4 compartments China.</strong></div></div>
+        <div class="card-link"><a class="link-chip primary" href="https://www.walmart.com/ip/5382382638" target="_blank" rel="noopener noreferrer">零售详情</a></div>
+      </div>
+    </article>
+    
+
+    <article class="product-card">
+      <div class="image-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="AI 生成示意图 · 非实物"><rect width="600" height="360" fill="#eef3f5"/><path d="M145 70H460V275H145Z" fill="#bc9968" stroke="#785f3d" stroke-width="5"/><path d="M165 160H440V200H165ZM165 215H440V255H165Z" fill="#f3e7ce" stroke="#785f3d" stroke-width="4"/><path d="M205 80V148M275 80V148M345 80V148M415 80V148" stroke="#f5e8ce" stroke-width="10"/><text x="300" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#465b69">AI 生成示意图 · 非实物</text></svg></div>
+      <div class="card-body">
+        <div class="badges"><span class="pill">3 个优先调研候选</span><span class="pill">Walmart US</span><span class="pill">采购候选 · 非同款确认</span></div>
+        <h3>Enogets 竹制可调文件架</h3>
+        <div class="details"><div class="detail-row"><span>零售价格</span><strong>USD 22.99 / 单件（索引价）</strong></div>
+<div class="detail-row"><span>成本加价率</span><strong>待询价；不计算</strong></div>
+<div class="detail-row"><span>示意图说明</span><strong>AI 生成 SVG 示意图 · 非商品证据</strong></div>
+<div class="detail-row"><span>证据与入选理由</span><strong>暂列入选：有可比较的中国供应商款式，但零售规格需复核 搜索摘要：4.1/5，7 个评分 13.8 × 9.8 × 13.4 in; 4 个竖格、2 个笔筒、2 层下置搁板</strong></div>
+<div class="detail-row"><span>采购路径与待核实项</span><strong>货源详情线索：Caoxian Shangrun Handicraft Co., Ltd.，山东；型号 9H117；13.7 D × 9.8 W × 13 H in。页面显示 100–499 件 $7.91、500–999 件 $7.63、1000–2999 件 $6.33、3000+ 件 $5.57；英国域名页面的美元符号币种与贸易条款须确认。零售高度 13.4 in 与供应商 13 in 不一致，轴向及竖格数量待确认。匹配等级：结构相近候选，非同款。平替搜索：金属网文件架，文件分类功能相同，但材质、外观和层架结构不同。 货源检索词：bamboo adjustable file organizer two shelves China. 平替检索词：metal mesh desktop file organizer China.</strong></div></div>
+        <div class="card-link"><span class="muted link-status">链接待核实；请按所列关键词继续研究</span></div>
+      </div>
+    </article>
+    
+
+    <article class="product-card">
+      <div class="image-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="AI 生成示意图 · 非实物"><rect width="600" height="360" fill="#eef3f5"/><path d="M115 155L365 95L495 155L250 225Z" fill="#dfeef1" stroke="#587886" stroke-width="4"/><path d="M115 155V225L250 285L495 215V155L250 225Z" fill="#bfd8de" stroke="#587886" stroke-width="4"/><path d="M270 235L465 180V207L270 260Z" fill="#edf6f7" stroke="#587886" stroke-width="3"/><path d="M355 225L390 215" stroke="#a98450" stroke-width="6"/><text x="300" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#465b69">AI 生成示意图 · 非实物</text></svg></div>
+      <div class="card-body">
+        <div class="badges"><span class="pill">3 个优先调研候选</span><span class="pill">Walmart US</span><span class="pill">采购候选 · 非同款确认</span></div>
+        <h3>Pen+Gear 透明文件托盘（带抽屉）</h3>
+        <div class="details"><div class="detail-row"><span>零售价格</span><strong>USD 24.47 / 单件（索引价）</strong></div>
+<div class="detail-row"><span>成本加价率</span><strong>待询价；不计算</strong></div>
+<div class="detail-row"><span>示意图说明</span><strong>AI 生成 SVG 示意图 · 非商品证据</strong></div>
+<div class="detail-row"><span>证据与入选理由</span><strong>入选：文件与小物件两用，便于比较抽屉结构和包装成本 4.5/5，47 个评分；部分评论来自促销 3.54 × 10.47 × 13.5 in; 透明；单件；页面摘要称亚克力和钢、1 抽屉，需实物确认</strong></div>
+<div class="detail-row"><span>采购路径与待核实项</span><strong>货源详情线索：Shenzhen Stari Acrylic Fabrication Co., Ltd.，中国；STR-R951；亚克力可抽拉收纳。索引价 $6.93–36.00、MOQ 50 件；详情正文未读到，尺寸及报价组合不明。匹配等级：材质和抽屉功能相关线索，未确认文件托盘适配。卡片改用亚克力文件托盘抽屉搜索路径。平替：可叠放塑料文件托盘，保留文件分类功能，但没有确认抽屉功能。 货源检索词：acrylic paper tray drawer China. 平替检索词：stackable plastic letter tray China.</strong></div></div>
+        <div class="card-link"><a class="link-chip primary" href="https://www.walmart.com/ip/5506465860" target="_blank" rel="noopener noreferrer">零售详情</a></div>
+      </div>
+    </article>
+    </div>
+            </section>
+            <section class="band"><div class="section-head"><h2>8 个候选的证据比较</h2></div><article class="candidate"><h3>Pen+Gear 透明旋转收纳架</h3><p>USD 18.82 · 6.57 × 6.57 × 7.28 in; 亚克力、钢；4 格；单件</p><p>4.8/5，82 个评分；累计反馈，非近期销量</p><p>网页正文可读；索引抓取约 2 个月前</p><p>入选：规格明确，旋转功能适合进一步做单商品比较</p><p><a href="https://www.walmart.com/ip/5382382638">商品详情</a></p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>Enogets 竹制可调文件架</h3><p>USD 22.99 · 13.8 × 9.8 × 13.4 in; 4 个竖格、2 个笔筒、2 层下置搁板</p><p>搜索摘要：4.1/5，7 个评分</p><p>仅搜索摘要；详情未成功读取；索引约上周</p><p>暂列入选：有可比较的中国供应商款式，但零售规格需复核</p><p>https://www.walmart.com/ip/19242121882 — 未通过访问核验</p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>Pen+Gear 蓝色文件托盘</h3><p>待核实 · 13.15 × 10.25 × 2.95 in; 单层托盘；材质待核实</p><p>未获得可靠需求信号</p><p>搜索摘要；详情未成功读取；索引约 5 天前</p><p>候选商品，未入选：缺少价格与需求证据</p><p>https://www.walmart.com/ip/17943708907 — 未通过访问核验</p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>Pen+Gear 透明文件托盘（带抽屉）</h3><p>USD 24.47 · 3.54 × 10.47 × 13.5 in; 透明；单件；页面摘要称亚克力和钢、1 抽屉，需实物确认</p><p>4.5/5，47 个评分；部分评论来自促销</p><p>网页正文可读；索引约 6 天前</p><p>入选：文件与小物件两用，便于比较抽屉结构和包装成本</p><p><a href="https://www.walmart.com/ip/5506465860">商品详情</a></p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>Pen+Gear 金属网文件收纳架</h3><p>待核实 · 3 trays + 5 upright sections; 黑色；3 个滑动托盘和 5 个竖格；外尺寸待确认</p><p>未获得可靠需求信号</p><p>搜索摘要；详情未成功读取；抓取日期不明</p><p>候选商品，未入选：价格与占地尺寸缺失</p><p>https://www.walmart.com/ip/191586350 — 未通过访问核验</p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>Mayuna 四格金属网收纳</h3><p>USD 7.75 · 6.8 × 5.1 × 3.5 in; 黑色钢网；高度另写作 3.54 in</p><p>摘要显示暂无评分</p><p>搜索摘要；详情未成功读取；索引约 5 个月前</p><p>候选商品，未入选：证据陈旧、无评分</p><p>https://www.walmart.com/ip/19403902870 — 未通过访问核验</p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>Lopunny 金属笔筒</h3><p>USD 7.99 · 4.13 × 4.13 × 3.82 / 3.93 in; 黑色；标题与规格中的高度不一致</p><p>未获得可靠需求信号</p><p>搜索摘要；详情未成功读取；索引约 6 个月前</p><p>候选商品，未入选：尺寸冲突需核实</p><p>https://www.walmart.com/ip/19965410555 — 未通过访问核验</p><small>查询日期：2026-09-20</small></article><article class="candidate"><h3>DAILIHIVE 金属网分格托盘</h3><p>USD 6.29 · D-Silver; 选定 D-Silver；3 分格描述；标题又写 3-tier，待核实</p><p>未获得可靠需求信号</p><p>搜索摘要；详情未成功读取；索引约上周</p><p>候选商品，未入选：变体结构不明，不能与最低价混用</p><p>https://www.walmart.com/ip/20232554847 — 未通过访问核验</p><small>查询日期：2026-09-20</small></article></section>
+    <section class="band">
+      <div class="section-head"><h2>风险与研究限制</h2></div>
+      <div class="notes"><ul><li>链接验证：2 个 Walmart 商品页经公开正文复核可用；其余链接未通过自动访问检查。Alibaba 详情与搜索路径均暂不可确认为公开可用。下列搜索词仅供后续人工核实。</li><li>这是公开信息筛选草稿，8 个候选中暂选 3 个。未证实最近 30 天热度，不宣称销量、畅销排名或采购收益。</li><li>2026-09-20 是本次查询日期，不等于来源更新日期。价格、评分和库存来自不同时间的索引快照，采购前应在同一地区和变体下复核。</li><li>累计评分仅作为已有用户反馈的信号；不能推导近期销量或增长。Walmart 的 AI 摘要仅作为页面说明，不当作独立验证。</li><li>本轮没有确认同款或已完成尽调的供应商。详情候选、功能平替方向和搜索入口分别标注，不给没有证据的匹配百分比。</li><li>成本加价率 =（零售单价－采购单价）÷采购单价×100%。本次均不计算：币种、尺寸、数量单位或贸易条款尚未充分对齐。采购价格标记待询价。</li><li>未计入运费、关税、平台费、广告、退货、认证、包装、仓储和最低起订量占用资金。成本加价率不是毛利率或净利润率。</li><li>卡片图片为 AI 生成 SVG 示意图，不是真实商品照片，不用于确认材质、尺寸或匹配关系。</li><li>待核实案例：Lopunny 标题高度 3.82 in，规格高度 3.93 in，且详情读取失败。下一步应查看同一变体规格表或索取尺寸图；本轮未联系供应商。</li><li>核实顺序：同一变体零售价格 → 供应商材质、外尺寸、内尺寸和结构图 → 起订量、单价币种和贸易条款 → 样品与包装。不要仅凭相似图片认定原厂或品牌授权。</li></ul></div>
+    </section>
+    <section class="band">
+      <div class="section-head"><h2>已核实链接与历史来源</h2></div>
+      <div class="notes"><ul><li>Pen+Gear 透明旋转收纳架: <a href="https://www.walmart.com/ip/5382382638" target="_blank" rel="noopener noreferrer">打开</a></li><li>Enogets 竹制可调文件架 — 原始来源，访问未验证：https://www.walmart.com/ip/19242121882: <span class="muted link-status">链接待核实；请按所列关键词继续研究</span></li><li>Pen+Gear 蓝色文件托盘 — 原始来源，访问未验证：https://www.walmart.com/ip/17943708907: <span class="muted link-status">链接待核实；请按所列关键词继续研究</span></li><li>Pen+Gear 透明文件托盘（带抽屉）: <a href="https://www.walmart.com/ip/5506465860" target="_blank" rel="noopener noreferrer">打开</a></li><li>Pen+Gear 金属网文件收纳架 — 原始来源，访问未验证：https://www.walmart.com/ip/191586350: <span class="muted link-status">链接待核实；请按所列关键词继续研究</span></li><li>Mayuna 四格金属网收纳 — 原始来源，访问未验证：https://www.walmart.com/ip/19403902870: <span class="muted link-status">链接待核实；请按所列关键词继续研究</span></li><li>Lopunny 金属笔筒 — 原始来源，访问未验证：https://www.walmart.com/ip/19965410555: <span class="muted link-status">链接待核实；请按所列关键词继续研究</span></li><li>DAILIHIVE 金属网分格托盘 — 原始来源，访问未验证：https://www.walmart.com/ip/20232554847: <span class="muted link-status">链接待核实；请按所列关键词继续研究</span></li></ul></div>
+    </section>
+    
+  </main>
+</body>
+</html>

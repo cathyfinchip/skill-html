@@ -1,0 +1,300 @@
+{
+  "language": "en",
+  "status": "partial_research",
+  "title": "One Rotating Organizer. Four Sourcing Leads.",
+  "query_date": "2026-09-20 (America/New_York)",
+  "market": "United States",
+  "platforms": [
+    "Walmart US",
+    "Alibaba"
+  ],
+  "summary": "The retail baseline has been refreshed. Two leads for similar designs and two for alternatives need verification. No exact match or defensible cost markup has been established.",
+  "original": {
+    "name": "Pen+Gear Clear Four-Compartment Rotating Desk Organizer",
+    "platform": "Walmart US",
+    "price": "USD 18.82 / single unit",
+    "verified_url": "https://www.walmart.com/ip/5382382638",
+    "summary": "Clear; acrylic and steel; 6.57 × 6.57 × 7.28 in; 4 compartments; the page describes 360° rotation. Current rating: 4.8/5 from 88 ratings. Interior dimensions, wall thickness and bearing construction remain unconfirmed.",
+    "image_path": "assets/concept-0-en.svg",
+    "image_source": "ai_generated_svg",
+    "image_source_url": "",
+    "image_note": "AI-generated SVG illustration · not product evidence",
+    "image_status": "ai_generated_svg"
+  },
+  "exact_matches": [
+    {
+      "name": "L1 · Clear rotating pen holder lead",
+      "platform": "Alibaba",
+      "supplier": "Jinhua Xinyurui Crafts Co., Ltd.",
+      "price": "$5.70–5.99; MOQ 2 pieces; currency and quote terms unconfirmed; quote required",
+      "margin": "Not calculated: specifications and quote terms are not comparable",
+      "match": "Search lead · unverified product",
+      "reason": "China (CN listing marker; not independently verified); material: acrylic; outer dimensions: unconfirmed; compartments: Unconfirmed; rotation: 360° (title claim) The title describes clear acrylic and 360° rotation. Dimensions and compartment count are missing, so a four-compartment match is unproven. If size and base construction fit, it could preserve visibility and rotating access. Search extract, roughly 1 month old; the opened listing did not reproduce this item",
+      "risk": "Missing: product details, interior/exterior dimensions, sample terms, confirmed currency and trade terms. Search keywords: Jinhua Xinyurui clear acrylic 360 rotating pen holder",
+      "verified_url": "",
+      "sourcing_url": "",
+      "alternative_url": "",
+      "image_source": "ai_generated_svg",
+      "image_note": "AI-generated SVG illustration · not product evidence",
+      "image_path": "assets/concept-1-en.svg",
+      "image_source_url": "",
+      "image_status": "ai_generated_svg"
+    },
+    {
+      "name": "L2 · Clear rotating stationery organizer lead",
+      "platform": "Alibaba",
+      "supplier": "Zhejiang Caiya Plastic Co., Ltd.",
+      "price": "$5.80–6.00; MOQ 100 pieces; currency and quote terms unconfirmed; quote required",
+      "margin": "Not calculated: specifications and quote terms are not comparable",
+      "match": "Search lead · unverified product",
+      "reason": "China (CN listing marker; not independently verified); material: acrylic; outer dimensions: unconfirmed; compartments: Unconfirmed; rotation: 360° (title claim) The title describes clear acrylic and 360° rotation. Four-compartment layout, outer dimensions and actual resin remain unconfirmed. Its indexed MOQ exceeds L1’s; this is not evidence of better quality. Search extract, roughly 2 months old; the opened category page showed different content",
+      "risk": "Missing: product details, interior/exterior dimensions, sample terms, confirmed currency and trade terms. Search keywords: Zhejiang Caiya clear acrylic rotating pen organizer",
+      "verified_url": "",
+      "sourcing_url": "",
+      "alternative_url": "",
+      "image_source": "ai_generated_svg",
+      "image_note": "AI-generated SVG illustration · not product evidence",
+      "image_path": "assets/concept-2-en.svg",
+      "image_source_url": "",
+      "image_status": "ai_generated_svg"
+    }
+  ],
+  "alternatives": [
+    {
+      "name": "L3 · White five-slot rotating pen holder lead",
+      "platform": "Alibaba",
+      "supplier": "Nanchang Keda Pen Manufacturing Co., Ltd.",
+      "price": "$0.75–1.00; MOQ 50 pieces; currency and quote terms unconfirmed; quote required",
+      "margin": "Not calculated: specifications and quote terms are not comparable",
+      "match": "Search lead · unverified product",
+      "reason": "China (CN listing marker; not independently verified); material: acrylic (title only); outer dimensions: unconfirmed; compartments: 5; rotation: Rotatable (title claim; angle unknown) The title describes a white five-slot rotating design versus the clear four-compartment baseline. It may offer more categories but less visibility. Per-slot capacity and stability are unknown, and the title alone does not establish the actual material. Search extract, roughly 1 month old; product details unconfirmed",
+      "risk": "Missing: product details, interior/exterior dimensions, sample terms, confirmed currency and trade terms. Search keywords: Nanchang Keda white 5 slots rotating pen holder",
+      "verified_url": "",
+      "sourcing_url": "",
+      "alternative_url": "",
+      "image_source": "ai_generated_svg",
+      "image_note": "AI-generated SVG illustration · not product evidence",
+      "image_path": "assets/concept-3-en.svg",
+      "image_source_url": "",
+      "image_status": "ai_generated_svg"
+    },
+    {
+      "name": "L4 · Clear six-compartment organizer lead",
+      "platform": "Alibaba",
+      "supplier": "Shenzhen D&D Display Products Co., Limited",
+      "price": "$10.90–29.90; MOQ 100 pieces; currency and quote terms unconfirmed; quote required",
+      "margin": "Not calculated: specifications and quote terms are not comparable",
+      "match": "Search lead · unverified product",
+      "reason": "China (CN listing marker; not independently verified); material: acrylic; outer dimensions: unconfirmed; compartments: 6; rotation: Unconfirmed The title describes clear six-compartment acrylic storage, relevant to sorting stationery. Rotation is not established; without it, reaching rear items may require moving the organizer. Dimensions and the variants behind the price range remain unresolved. Category-page extract, indexed roughly 2 months earlier; product-detail open failed",
+      "risk": "Missing: product details, interior/exterior dimensions, sample terms, confirmed currency and trade terms. Search keywords: Shenzhen D D clear 6 compartment acrylic organizer",
+      "verified_url": "",
+      "sourcing_url": "",
+      "alternative_url": "",
+      "image_source": "ai_generated_svg",
+      "image_note": "AI-generated SVG illustration · not product evidence",
+      "image_path": "assets/concept-4-en.svg",
+      "image_source_url": "",
+      "image_status": "ai_generated_svg"
+    }
+  ],
+  "notes": [
+    "Access review: the Walmart product body is readable. Alibaba product, category and search pages did not pass access checks. Source addresses are audit records, not verified purchase links.",
+    "The retail page was fetched again for this run: clear, single unit, USD 18.82, rated 4.8/5 from 88 ratings. These are public listing claims, not physical test results.",
+    "No exact match, verified similar product or verified functional substitute was established. The 4 entries are search leads: 2 for related designs and 2 for alternative approaches. The list is not padded to 3+2.",
+    "All purchase costs require a quote. Dollar-sign ranges and MOQs are listing or search-extract observations, not confirmed supplier quotes. Currency, variants, quantity tiers and trade terms remain unresolved.",
+    "Cost markup = (retail unit price − purchase unit cost) ÷ purchase unit cost × 100%. None is calculated: quotes cannot be matched to the baseline specification, and the lowest number in a range is not a defensible cost basis.",
+    "Excluded costs include freight, duties, marketplace fees, advertising, packaging, certification, storage, returns and capital committed to minimum orders. Cost markup is not gross margin or net profit margin.",
+    "Investigate L1 first: its title describes clear rotating storage, and the indexed 2-piece MOQ may make a small sample inquiry practical. First confirm the model, current MOQ and sample terms. This priority is not a supplier endorsement or a claim of more reliable pricing.",
+    "Decide whether to sample only after confirming dimensions, material, rotation and quote terms. Evaluate smooth rotation, loaded stability, edge finish and scratch protection in transit.",
+    "No login or access restrictions were bypassed. No supplier was contacted and no order was placed. Brand names and similar appearance do not establish factory relationships or authorization.",
+    "All images are AI-generated SVG illustrations of category concepts; they establish no specific shape, dimensions, material or product match."
+  ],
+  "inquiry_checklist": [
+    "Confirm the model, clear/white variant, resin type (PMMA, PS, PET or other) and wall thickness.",
+    "Provide a dimensioned exterior drawing, interior dimensions for each compartment and the compartment count; compare against 6.57 × 6.57 × 7.28 in and 4 compartments.",
+    "Does it rotate through 360°? Specify base material, bearing construction, anti-slip features and stability under load.",
+    "Quote sample price, sample shipping, sample lead time and production lead time; confirm samples match production.",
+    "Confirm stock and custom MOQs, units per item, price breaks and quote validity.",
+    "Specify scratch protection, inner and master carton quantities, carton dimensions, gross weight, damage handling and inspection criteria.",
+    "State the currency, Incoterm such as EXW, FOB or DDP, and included charges; name the port for FOB quotes."
+  ],
+  "lead_records": [
+    {
+      "id": "L1",
+      "supplier": "Jinhua Xinyurui Crafts Co., Ltd.",
+      "source_url": "https://www.alibaba.com/wholesale/acrylic-organizer-pen.html",
+      "detail_url": null,
+      "price_range": [
+        5.7,
+        5.99
+      ],
+      "moq": 2,
+      "slots": null,
+      "rotation": true,
+      "material_claim": "acrylic",
+      "color_claim": "clear",
+      "name": {
+        "zh": "透明旋转笔筒线索",
+        "en": "Clear rotating pen holder lead"
+      },
+      "group": "similar",
+      "source_age": {
+        "zh": "搜索摘要，约 1 个月前；打开列表后未重现该商品",
+        "en": "Search extract, roughly 1 month old; the opened listing did not reproduce this item"
+      },
+      "comparison": {
+        "zh": "标题涉及透明、亚克力和 360° 旋转；格数及尺寸未知，不能确认四格或同款。若尺寸与底座合适，可保留透明可视和旋转取物体验。",
+        "en": "The title describes clear acrylic and 360° rotation. Dimensions and compartment count are missing, so a four-compartment match is unproven. If size and base construction fit, it could preserve visibility and rotating access."
+      },
+      "country_claim": "China (CN listing marker; not independently audited)",
+      "dimensions": null,
+      "currency": "Dollar sign shown; currency unconfirmed",
+      "unit": "piece",
+      "quote_terms": null,
+      "match_level": "search_lead",
+      "search_url": "https://www.alibaba.com/trade/search?SearchText=Jinhua+Xinyurui+clear+acrylic+360+rotating+pen+holder",
+      "quote_status": "inquiry_required",
+      "cost_markup": null
+    },
+    {
+      "id": "L2",
+      "supplier": "Zhejiang Caiya Plastic Co., Ltd.",
+      "source_url": "https://www.alibaba.com/countrysearch/CN/acrylic-stationery-holder.html",
+      "detail_url": null,
+      "price_range": [
+        5.8,
+        6.0
+      ],
+      "moq": 100,
+      "slots": null,
+      "rotation": true,
+      "material_claim": "acrylic",
+      "color_claim": "clear",
+      "name": {
+        "zh": "透明旋转文具收纳线索",
+        "en": "Clear rotating stationery organizer lead"
+      },
+      "group": "similar",
+      "source_age": {
+        "zh": "搜索摘要，约 2 个月前；打开后的类目页内容已不同",
+        "en": "Search extract, roughly 2 months old; the opened category page showed different content"
+      },
+      "comparison": {
+        "zh": "标题涉及透明亚克力和 360° 旋转；四格布局、外尺寸及实际树脂种类未确认。与 L1 相比，摘要起订量更高，不代表质量更高。",
+        "en": "The title describes clear acrylic and 360° rotation. Four-compartment layout, outer dimensions and actual resin remain unconfirmed. Its indexed MOQ exceeds L1’s; this is not evidence of better quality."
+      },
+      "country_claim": "China (CN listing marker; not independently audited)",
+      "dimensions": null,
+      "currency": "Dollar sign shown; currency unconfirmed",
+      "unit": "piece",
+      "quote_terms": null,
+      "match_level": "search_lead",
+      "search_url": "https://www.alibaba.com/trade/search?SearchText=Zhejiang+Caiya+clear+acrylic+rotating+pen+organizer",
+      "quote_status": "inquiry_required",
+      "cost_markup": null
+    },
+    {
+      "id": "L3",
+      "supplier": "Nanchang Keda Pen Manufacturing Co., Ltd.",
+      "source_url": "https://www.alibaba.com/wholesale/acrylic-organizer-pen.html",
+      "detail_url": null,
+      "price_range": [
+        0.75,
+        1.0
+      ],
+      "moq": 50,
+      "slots": 5,
+      "rotation": true,
+      "material_claim": "acrylic (title only)",
+      "color_claim": "white",
+      "name": {
+        "zh": "白色五格旋转笔筒线索",
+        "en": "White five-slot rotating pen holder lead"
+      },
+      "group": "alternative",
+      "source_age": {
+        "zh": "搜索摘要，约 1 个月前；详情未确认",
+        "en": "Search extract, roughly 1 month old; product details unconfirmed"
+      },
+      "comparison": {
+        "zh": "标题为白色五格旋转款，区别于透明四格零售基准。可能增加分类格数，但遮挡内容物，单格容积及旋转稳定性未知。标题写亚克力，不能据此认定实际材料。",
+        "en": "The title describes a white five-slot rotating design versus the clear four-compartment baseline. It may offer more categories but less visibility. Per-slot capacity and stability are unknown, and the title alone does not establish the actual material."
+      },
+      "country_claim": "China (CN listing marker; not independently audited)",
+      "dimensions": null,
+      "currency": "Dollar sign shown; currency unconfirmed",
+      "unit": "piece",
+      "quote_terms": null,
+      "match_level": "search_lead",
+      "search_url": "https://www.alibaba.com/trade/search?SearchText=Nanchang+Keda+white+5+slots+rotating+pen+holder",
+      "quote_status": "inquiry_required",
+      "cost_markup": null
+    },
+    {
+      "id": "L4",
+      "supplier": "Shenzhen D&D Display Products Co., Limited",
+      "source_url": "https://www.alibaba.com/countrysearch/CN/acrylic-stationery-holder.html",
+      "detail_url": "https://www.alibaba.com/product-detail/Clear-6-Compartment-Acrylic-Organizer-Multi_62201947875.html",
+      "price_range": [
+        10.9,
+        29.9
+      ],
+      "moq": 100,
+      "slots": 6,
+      "rotation": null,
+      "material_claim": "acrylic",
+      "color_claim": "clear",
+      "name": {
+        "zh": "透明六格收纳线索",
+        "en": "Clear six-compartment organizer lead"
+      },
+      "group": "alternative",
+      "source_age": {
+        "zh": "类目页正文，索引约 2 个月前；详情打开失败",
+        "en": "Category-page extract, indexed roughly 2 months earlier; product-detail open failed"
+      },
+      "comparison": {
+        "zh": "标题为透明六格亚克力收纳，适合文具分类方向；没有证据确认旋转功能。若无旋转底座，取后排物品可能需要移动收纳盒。尺寸与报价对应变体均未确认。",
+        "en": "The title describes clear six-compartment acrylic storage, relevant to sorting stationery. Rotation is not established; without it, reaching rear items may require moving the organizer. Dimensions and the variants behind the price range remain unresolved."
+      },
+      "country_claim": "China (CN listing marker; not independently audited)",
+      "dimensions": null,
+      "currency": "Dollar sign shown; currency unconfirmed",
+      "unit": "piece",
+      "quote_terms": null,
+      "match_level": "search_lead",
+      "search_url": "https://www.alibaba.com/trade/search?SearchText=Shenzhen+D+D+clear+6+compartment+acrylic+organizer",
+      "quote_status": "inquiry_required",
+      "cost_markup": null
+    }
+  ],
+  "sources": [
+    {
+      "name": "Walmart · freshly retrieved this run",
+      "url": "https://www.walmart.com/ip/5382382638"
+    },
+    {
+      "name": "L1 — Search extract, roughly 1 month old; the opened listing did not reproduce this item — https://www.alibaba.com/wholesale/acrylic-organizer-pen.html",
+      "url": ""
+    },
+    {
+      "name": "L2 — Search extract, roughly 2 months old; the opened category page showed different content — https://www.alibaba.com/countrysearch/CN/acrylic-stationery-holder.html",
+      "url": ""
+    },
+    {
+      "name": "L3 — Search extract, roughly 1 month old; product details unconfirmed — https://www.alibaba.com/wholesale/acrylic-organizer-pen.html",
+      "url": ""
+    },
+    {
+      "name": "L4 — Category-page extract, indexed roughly 2 months earlier; product-detail open failed — https://www.alibaba.com/countrysearch/CN/acrylic-stationery-holder.html ; https://www.alibaba.com/product-detail/Clear-6-Compartment-Acrylic-Organizer-Multi_62201947875.html",
+      "url": ""
+    }
+  ],
+  "link_validation": {
+    "retail_url": "https://www.walmart.com/ip/5382382638",
+    "retail_public_access_safe": true,
+    "basis": "Fresh public HTML body text excluding script/style: product title, single variant, price and rating visible; no visible access gate. Original verifier matched raw code strings, as documented in case 1. Raw check retained unchanged.",
+    "supplier_links_public_access_safe": false,
+    "observed_at": "2026-09-21T00:27:45.934400+00:00"
+  }
+}

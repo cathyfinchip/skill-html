@@ -1,0 +1,263 @@
+{
+  "language": "zh",
+  "status": "partial_research_draft",
+  "title": "美国桌面收纳｜选品与采购调研草稿",
+  "query_date": "2026-09-20",
+  "market": "Walmart US",
+  "window": "公开信息快照 · 非近 30 天趋势结论",
+  "platforms": [
+    "Walmart",
+    "Alibaba"
+  ],
+  "summary": "这是公开信息筛选草稿，8 个候选中暂选 3 个。未证实最近 30 天热度，不宣称销量、畅销排名或采购收益。",
+  "notes": [
+    "链接验证：2 个 Walmart 商品页经公开正文复核可用；其余链接未通过自动访问检查。Alibaba 详情与搜索路径均暂不可确认为公开可用。下列搜索词仅供后续人工核实。",
+    "这是公开信息筛选草稿，8 个候选中暂选 3 个。未证实最近 30 天热度，不宣称销量、畅销排名或采购收益。",
+    "2026-09-20 是本次查询日期，不等于来源更新日期。价格、评分和库存来自不同时间的索引快照，采购前应在同一地区和变体下复核。",
+    "累计评分仅作为已有用户反馈的信号；不能推导近期销量或增长。Walmart 的 AI 摘要仅作为页面说明，不当作独立验证。",
+    "本轮没有确认同款或已完成尽调的供应商。详情候选、功能平替方向和搜索入口分别标注，不给没有证据的匹配百分比。",
+    "成本加价率 =（零售单价－采购单价）÷采购单价×100%。本次均不计算：币种、尺寸、数量单位或贸易条款尚未充分对齐。采购价格标记待询价。",
+    "未计入运费、关税、平台费、广告、退货、认证、包装、仓储和最低起订量占用资金。成本加价率不是毛利率或净利润率。",
+    "卡片图片为 AI 生成 SVG 示意图，不是真实商品照片，不用于确认材质、尺寸或匹配关系。",
+    "待核实案例：Lopunny 标题高度 3.82 in，规格高度 3.93 in，且详情读取失败。下一步应查看同一变体规格表或索取尺寸图；本轮未联系供应商。",
+    "核实顺序：同一变体零售价格 → 供应商材质、外尺寸、内尺寸和结构图 → 起订量、单价币种和贸易条款 → 样品与包装。不要仅凭相似图片认定原厂或品牌授权。"
+  ],
+  "trend_evidence": [
+    {
+      "candidate_name": "Pen+Gear 透明旋转收纳架",
+      "source_url": "https://www.walmart.com/ip/5382382638",
+      "price": "USD 18.82",
+      "specification": "6.57 × 6.57 × 7.28 in; 亚克力、钢；4 格；单件",
+      "visible_signal": "4.8/5，82 个评分；累计反馈，非近期销量",
+      "source_type": "网页正文可读；索引抓取约 2 个月前",
+      "query_date": "2026-09-20",
+      "selection_reason": "入选：规格明确，旋转功能适合进一步做单商品比较"
+    },
+    {
+      "candidate_name": "Enogets 竹制可调文件架",
+      "source_url": "https://www.walmart.com/ip/19242121882",
+      "price": "USD 22.99",
+      "specification": "13.8 × 9.8 × 13.4 in; 4 个竖格、2 个笔筒、2 层下置搁板",
+      "visible_signal": "搜索摘要：4.1/5，7 个评分",
+      "source_type": "仅搜索摘要；详情未成功读取；索引约上周",
+      "query_date": "2026-09-20",
+      "selection_reason": "暂列入选：有可比较的中国供应商款式，但零售规格需复核"
+    },
+    {
+      "candidate_name": "Pen+Gear 蓝色文件托盘",
+      "source_url": "https://www.walmart.com/ip/17943708907",
+      "price": "待核实",
+      "specification": "13.15 × 10.25 × 2.95 in; 单层托盘；材质待核实",
+      "visible_signal": "未获得可靠需求信号",
+      "source_type": "搜索摘要；详情未成功读取；索引约 5 天前",
+      "query_date": "2026-09-20",
+      "selection_reason": "候选商品，未入选：缺少价格与需求证据"
+    },
+    {
+      "candidate_name": "Pen+Gear 透明文件托盘（带抽屉）",
+      "source_url": "https://www.walmart.com/ip/5506465860",
+      "price": "USD 24.47",
+      "specification": "3.54 × 10.47 × 13.5 in; 透明；单件；页面摘要称亚克力和钢、1 抽屉，需实物确认",
+      "visible_signal": "4.5/5，47 个评分；部分评论来自促销",
+      "source_type": "网页正文可读；索引约 6 天前",
+      "query_date": "2026-09-20",
+      "selection_reason": "入选：文件与小物件两用，便于比较抽屉结构和包装成本"
+    },
+    {
+      "candidate_name": "Pen+Gear 金属网文件收纳架",
+      "source_url": "https://www.walmart.com/ip/191586350",
+      "price": "待核实",
+      "specification": "3 trays + 5 upright sections; 黑色；3 个滑动托盘和 5 个竖格；外尺寸待确认",
+      "visible_signal": "未获得可靠需求信号",
+      "source_type": "搜索摘要；详情未成功读取；抓取日期不明",
+      "query_date": "2026-09-20",
+      "selection_reason": "候选商品，未入选：价格与占地尺寸缺失"
+    },
+    {
+      "candidate_name": "Mayuna 四格金属网收纳",
+      "source_url": "https://www.walmart.com/ip/19403902870",
+      "price": "USD 7.75",
+      "specification": "6.8 × 5.1 × 3.5 in; 黑色钢网；高度另写作 3.54 in",
+      "visible_signal": "摘要显示暂无评分",
+      "source_type": "搜索摘要；详情未成功读取；索引约 5 个月前",
+      "query_date": "2026-09-20",
+      "selection_reason": "候选商品，未入选：证据陈旧、无评分"
+    },
+    {
+      "candidate_name": "Lopunny 金属笔筒",
+      "source_url": "https://www.walmart.com/ip/19965410555",
+      "price": "USD 7.99",
+      "specification": "4.13 × 4.13 × 3.82 / 3.93 in; 黑色；标题与规格中的高度不一致",
+      "visible_signal": "未获得可靠需求信号",
+      "source_type": "搜索摘要；详情未成功读取；索引约 6 个月前",
+      "query_date": "2026-09-20",
+      "selection_reason": "候选商品，未入选：尺寸冲突需核实"
+    },
+    {
+      "candidate_name": "DAILIHIVE 金属网分格托盘",
+      "source_url": "https://www.walmart.com/ip/20232554847",
+      "price": "USD 6.29",
+      "specification": "D-Silver; 选定 D-Silver；3 分格描述；标题又写 3-tier，待核实",
+      "visible_signal": "未获得可靠需求信号",
+      "source_type": "搜索摘要；详情未成功读取；索引约上周",
+      "query_date": "2026-09-20",
+      "selection_reason": "候选商品，未入选：变体结构不明，不能与最低价混用"
+    }
+  ],
+  "trend_categories": [
+    {
+      "category": "3 个优先调研候选",
+      "signal": "选择依据为规格清晰度、可见反馈和采购比较价值；顺序不是销售排名。",
+      "items": [
+        {
+          "name": "Pen+Gear 透明旋转收纳架",
+          "platform": "Walmart US",
+          "price": "USD 18.82 / 单件（索引价）",
+          "margin": "待询价；不计算",
+          "match": "采购候选 · 非同款确认",
+          "reason": "入选：规格明确，旋转功能适合进一步做单商品比较 4.8/5，82 个评分；累计反馈，非近期销量 6.57 × 6.57 × 7.28 in; 亚克力、钢；4 格；单件",
+          "risk": "货源方向：透明亚克力、4 格、旋转底座。Alibaba 搜索入口尚不代表具体供应商。平替方向：塑料旋转笔筒，保留旋转取物功能；材质、格数、底座稳定性和尺寸须另核实。匹配等级：搜索线索，未评级。 货源检索词：clear acrylic rotating desk organizer 4 compartments China. 平替检索词：plastic rotating pen holder 4 compartments China.",
+          "verified_url": "https://www.walmart.com/ip/5382382638",
+          "sourcing_url": "",
+          "alternative_url": "",
+          "sourcing_label": "货源搜索线索",
+          "alternative_label": "平替搜索线索",
+          "image_source": "ai_generated_svg",
+          "image_note": "AI 生成 SVG 示意图 · 非商品证据",
+          "image_path": "assets/illustration-1-zh.svg",
+          "image_source_url": "",
+          "image_status": "ai_generated_svg",
+          "observed_retail_url": "https://www.walmart.com/ip/5382382638",
+          "attempted_sourcing_url": "https://www.alibaba.com/trade/search?SearchText=clear+acrylic+rotating+desk+organizer+4+compartments+China",
+          "attempted_alternative_url": "https://www.alibaba.com/trade/search?SearchText=plastic+rotating+pen+holder+4+compartments+China"
+        },
+        {
+          "name": "Enogets 竹制可调文件架",
+          "platform": "Walmart US",
+          "price": "USD 22.99 / 单件（索引价）",
+          "margin": "待询价；不计算",
+          "match": "采购候选 · 非同款确认",
+          "reason": "暂列入选：有可比较的中国供应商款式，但零售规格需复核 搜索摘要：4.1/5，7 个评分 13.8 × 9.8 × 13.4 in; 4 个竖格、2 个笔筒、2 层下置搁板",
+          "risk": "货源详情线索：Caoxian Shangrun Handicraft Co., Ltd.，山东；型号 9H117；13.7 D × 9.8 W × 13 H in。页面显示 100–499 件 $7.91、500–999 件 $7.63、1000–2999 件 $6.33、3000+ 件 $5.57；英国域名页面的美元符号币种与贸易条款须确认。零售高度 13.4 in 与供应商 13 in 不一致，轴向及竖格数量待确认。匹配等级：结构相近候选，非同款。平替搜索：金属网文件架，文件分类功能相同，但材质、外观和层架结构不同。 货源检索词：bamboo adjustable file organizer two shelves China. 平替检索词：metal mesh desktop file organizer China.",
+          "verified_url": "",
+          "sourcing_url": "",
+          "alternative_url": "",
+          "sourcing_label": "货源搜索线索",
+          "alternative_label": "平替搜索线索",
+          "image_source": "ai_generated_svg",
+          "image_note": "AI 生成 SVG 示意图 · 非商品证据",
+          "image_path": "assets/illustration-2-zh.svg",
+          "image_source_url": "",
+          "image_status": "ai_generated_svg",
+          "observed_retail_url": "https://www.walmart.com/ip/19242121882",
+          "attempted_sourcing_url": "https://www.alibaba.com/trade/search?SearchText=bamboo+adjustable+file+organizer+two+shelves+China",
+          "attempted_alternative_url": "https://www.alibaba.com/trade/search?SearchText=metal+mesh+desktop+file+organizer+China"
+        },
+        {
+          "name": "Pen+Gear 透明文件托盘（带抽屉）",
+          "platform": "Walmart US",
+          "price": "USD 24.47 / 单件（索引价）",
+          "margin": "待询价；不计算",
+          "match": "采购候选 · 非同款确认",
+          "reason": "入选：文件与小物件两用，便于比较抽屉结构和包装成本 4.5/5，47 个评分；部分评论来自促销 3.54 × 10.47 × 13.5 in; 透明；单件；页面摘要称亚克力和钢、1 抽屉，需实物确认",
+          "risk": "货源详情线索：Shenzhen Stari Acrylic Fabrication Co., Ltd.，中国；STR-R951；亚克力可抽拉收纳。索引价 $6.93–36.00、MOQ 50 件；详情正文未读到，尺寸及报价组合不明。匹配等级：材质和抽屉功能相关线索，未确认文件托盘适配。卡片改用亚克力文件托盘抽屉搜索路径。平替：可叠放塑料文件托盘，保留文件分类功能，但没有确认抽屉功能。 货源检索词：acrylic paper tray drawer China. 平替检索词：stackable plastic letter tray China.",
+          "verified_url": "https://www.walmart.com/ip/5506465860",
+          "sourcing_url": "",
+          "alternative_url": "",
+          "sourcing_label": "货源搜索线索",
+          "alternative_label": "平替搜索线索",
+          "image_source": "ai_generated_svg",
+          "image_note": "AI 生成 SVG 示意图 · 非商品证据",
+          "image_path": "assets/illustration-3-zh.svg",
+          "image_source_url": "",
+          "image_status": "ai_generated_svg",
+          "observed_retail_url": "https://www.walmart.com/ip/5506465860",
+          "attempted_sourcing_url": "https://www.alibaba.com/trade/search?SearchText=acrylic+paper+tray+drawer+China",
+          "attempted_alternative_url": "https://www.alibaba.com/trade/search?SearchText=stackable+plastic+letter+tray+China"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "Pen+Gear 透明旋转收纳架",
+      "url": "https://www.walmart.com/ip/5382382638"
+    },
+    {
+      "name": "Enogets 竹制可调文件架 — 原始来源，访问未验证：https://www.walmart.com/ip/19242121882",
+      "url": ""
+    },
+    {
+      "name": "Pen+Gear 蓝色文件托盘 — 原始来源，访问未验证：https://www.walmart.com/ip/17943708907",
+      "url": ""
+    },
+    {
+      "name": "Pen+Gear 透明文件托盘（带抽屉）",
+      "url": "https://www.walmart.com/ip/5506465860"
+    },
+    {
+      "name": "Pen+Gear 金属网文件收纳架 — 原始来源，访问未验证：https://www.walmart.com/ip/191586350",
+      "url": ""
+    },
+    {
+      "name": "Mayuna 四格金属网收纳 — 原始来源，访问未验证：https://www.walmart.com/ip/19403902870",
+      "url": ""
+    },
+    {
+      "name": "Lopunny 金属笔筒 — 原始来源，访问未验证：https://www.walmart.com/ip/19965410555",
+      "url": ""
+    },
+    {
+      "name": "DAILIHIVE 金属网分格托盘 — 原始来源，访问未验证：https://www.walmart.com/ip/20232554847",
+      "url": ""
+    }
+  ],
+  "supplier_observations": [
+    {
+      "url": "https://www.alibaba.com/product-detail/Clear-acrylic-stackable-desk-organizer-acrylic_60499637104.html",
+      "name": "Shenzhen Stari Acrylic Fabrication Co., Ltd.",
+      "origin": "China",
+      "model": "STR-R951",
+      "material": "acrylic",
+      "price_range_display": "$6.93–36.00",
+      "moq": 50,
+      "unit": "pieces",
+      "evidence": "Indexed product extract; direct open returned no readable text. Dimensions and quote basis unresolved. Not a verified supplier recommendation."
+    },
+    {
+      "url": "https://www.alibaba.co.uk/product-detail/Bamboo-Desk-File-Organizer-13-Document_1601031459054.html",
+      "name": "Caoxian Shangrun Handicraft Co., Ltd.",
+      "origin": "Shandong, China",
+      "model": "9H117",
+      "dimensions": "13.7 D × 9.8 W × 13 H in",
+      "price_tiers_display": [
+        {
+          "qty": "100–499",
+          "price": 7.91
+        },
+        {
+          "qty": "500–999",
+          "price": 7.63
+        },
+        {
+          "qty": "1000–2999",
+          "price": 6.33
+        },
+        {
+          "qty": "3000+",
+          "price": 5.57
+        }
+      ],
+      "currency_status": "Dollar sign visible on UK-domain page; currency and Incoterms need confirmation",
+      "evidence": "Readable public web extract, approximately 4 months old; supplier claims not independently audited."
+    }
+  ],
+  "link_validation": {
+    "basis": "Original verifier preserved. Two Walmart links reviewed using public HTML text excluding scripts/styles. Raw code strings notFoundIcon and OnePayWallet caused false positives. No authentication or access bypass used.",
+    "public_access_safe_urls": [
+      "https://www.walmart.com/ip/5382382638",
+      "https://www.walmart.com/ip/5506465860"
+    ],
+    "remaining_links": "Unverified; not actionable recommendations."
+  }
+}

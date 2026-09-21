@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-label="Enogets 竹制可调文件架 approximate illustration">
+  <rect width="900" height="650" fill="#f8fafc"/>
+  <rect x="135" y="80" width="630" height="490" rx="36" fill="hsl(33, 72%, 94%)" stroke="#d8e1ec" stroke-width="3"/>
+  <circle cx="450" cy="230" r="96" fill="hsl(33, 68%, 68%)" opacity="0.28"/>
+  <rect x="326" y="181" width="248" height="112" rx="22" fill="#ffffff" stroke="hsl(33, 58%, 56%)" stroke-width="5"/>
+  <path d="M354 245h192M384 214h132M394 276h112" stroke="#334155" stroke-width="13" stroke-linecap="round" opacity="0.68"/>
+  <text x="450" y="374" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" fill="#1f2937">Enogets 竹制可调文件架</text>
+  <text x="450" y="536" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#64748b">AI-generated SVG approximate illustration - not product evidence</text>
+</svg>
