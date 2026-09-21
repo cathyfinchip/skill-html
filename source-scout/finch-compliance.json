@@ -1,0 +1,27 @@
+[
+  {
+    "file": "instruction.html",
+    "bytes": 11002,
+    "compliance": "passed"
+  },
+  {
+    "file": "information-en.html",
+    "bytes": 18722,
+    "compliance": "passed"
+  },
+  {
+    "file": "information-zh.html",
+    "bytes": 17986,
+    "compliance": "passed"
+  },
+  {
+    "file": "benchmark.html",
+    "bytes": 10462,
+    "compliance": "passed"
+  },
+  {
+    "file": "showcase.html",
+    "bytes": 11052,
+    "compliance": "passed"
+  }
+]
